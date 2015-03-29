@@ -1,24 +1,29 @@
 \documentclass[12pt,letterpaper]{article}
 \usepackage{graphicx}
+\usepackage{color}
 \title{Ball Shooter}
 \author{Frank Mock}
+\date{\small last updated  \color{blue}March 29, 2015}
 \begin{document}
 \maketitle
 \section*{Description}
-This game is coded in Python and currently consists of a single source file named ballshooter.py. The player earns points by shooting a red ball that bounces around the window. To make the game more challenging, additional random shapes will appear in the window. The red ball will bounce off the additional shapes. It the player accidentally shoots a shape that is not the red ball the game is over. As the game progresses more additional shapes will appear and the red ball will move faster.
+%PLEASE UPDATE THIS DOCUMENT AS CHANGES ARE MADE TO THE PROGRAM
+This simple game is coded using Python 3 and the tkinter graphics module. Currently the game consists of a single source file named ballshooter.py. The player scores points by shooting a red ball that bounces around the window. To make the game more challenging, additional random shapes will appear in the window. If the player accidentally shoots a shape that is not the red ball the game is over. The game starts with a blue square and a yellow triangle obstacle. As the game progresses more additional shapes will appear and the red ball will move faster. When the game ends you can press any key to start playing again.
 \section*{Game Controls}
+Any-Key - start the game over\\
 Left Arrow - moves shooter left\\
 Right Arrow - moves shooter right\\
 Up Arrow - fires a bullet\\
 Down Arrow - stops the shooter from moving\\
 \section*{Bugs}
 \begin{enumerate}
- \item If you fire a bullet before the previous bullet leaves the game window then the previous window will stop moving and remain in the game window for the duration of the game.
+ \item If you fire a bullet before the previous bullet leaves the game window then the previous bullet will stop moving and remain in the game window for the duration of the game.
 \end{enumerate}
 \section*{To Do}
 \begin{enumerate}
  \item Fix the bug where a bullet will stay on the screen if a bullet is fired before the previous one has left the game window
- \item Show the players score in the game window
+ \item improve collision detection of a bullet and the red ball. Currently hitting the side of the ball does not register a hit
+ \item (\textbf{DONE})Show the players score in the game window
  \item Add additional random shapes periodically to the game window
  \item Add a sound effect that sounds each time the ball is shot 
  \end{enumerate} 
